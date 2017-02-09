@@ -15,8 +15,8 @@ public class ProyectoAjedrezInicio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("HOLa");
-        System.out.println("h");
+        cTablero t = new cTablero();
+        t.mostrarTablero();
     }
     
 }

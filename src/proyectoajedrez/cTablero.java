@@ -29,10 +29,10 @@ public class cTablero {
                 tablero[8][j] = i;
                 j++;
         }
-        /*for (char k = '8'; k > '0'; k--) {//resolver problema
+        for (char k = 8; k > 0 ; k--) {//resolver problema
             tablero[k][0] = k;
             tablero[k][8] = k;
-        }*/
+        }
     }
 
     public void gestionTablero() {

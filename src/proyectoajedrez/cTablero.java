@@ -22,11 +22,11 @@ public class cTablero {
     }
 
     public void setTablero() {
+        int j = 1;
         for (char i = 'a'; i < 'h'; i++) {
-            for (int j = 0; j < tablero.length; j++) {
-                tablero[i][j] = i;
-
-            }
+                tablero[0][j] = i;
+                tablero[9][j] = i;
+                j++;
         }
     }
 

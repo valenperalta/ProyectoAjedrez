@@ -16,6 +16,7 @@ public class ProyectoAjedrezInicio {
      */
     public static void main(String[] args) {
         System.out.println("HOLa");
+        System.out.println("h");
     }
     
 }

@@ -9,6 +9,6 @@ package proyectoajedrez;
  *
  * @author valentinam.peralta
  */
-public class cJugador {
-    public String nombre;
+public class cPeon extends cTrebejo{
+    
 }

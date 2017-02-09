@@ -10,5 +10,6 @@ package proyectoajedrez;
  * @author valentinam.peralta
  */
 public class cTrebejo {
-    
+    public String color;
+    public int numero;
 }

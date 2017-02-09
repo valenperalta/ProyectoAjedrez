@@ -16,6 +16,7 @@ public class ProyectoAjedrezInicio {
      */
     public static void main(String[] args) {
         cTablero t = new cTablero();
+        t.setTablero();
         t.mostrarTablero();
     }
     

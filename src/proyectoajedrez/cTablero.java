@@ -14,6 +14,7 @@ public class cTablero {
 
     private char[][] tablero = new char[10][10];
     private cJugador j1,j2;
+    private boolean disponible;
 
     public cTablero() {
         for (int i = 0; i < 10; i++) {
@@ -55,5 +56,13 @@ public class cTablero {
             System.out.println("-------------------------------------------");
         }
         }
+    }
+    
+    public void checkDisponibilidad(){
+        
+    }
+    
+    public void setTrebejosCelda(){
+    
     }
 }

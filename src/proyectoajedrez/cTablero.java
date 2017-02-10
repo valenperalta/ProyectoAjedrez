@@ -9,13 +9,15 @@ package proyectoajedrez;
  *
  * @author valentinam.peralta
  */
+
 public class cTablero {
 
-    public char[][] tablero = new char[9][9];
+    private char[][] tablero = new char[10][10];
+    private cJugador j1,j2;
 
     public cTablero() {
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
                 tablero[i][j] = ' ';
             }
         }
@@ -24,15 +26,15 @@ public class cTablero {
     public void setTablero() {
         int j = 1;
         char i;
-        for (i = 'a'; i < 'h'; i++) {
+        for (i = 'a'; i <= 'h'; i++) {
             tablero[0][j] = i;
-            tablero[8][j] = i;
+            tablero[9][j] = i;
             j++;
         }
         j = 1;
-        for (char k = 8; k > 0; k--) {//resolver problema
+        for (char k = 56; k > 48; k--) {//resolver problema
             tablero[j][0] = k;
-            tablero[j][8] = k;
+            tablero[j][9] = k;
             j++;
         }
     }
@@ -42,14 +44,16 @@ public class cTablero {
     }
 
     public void mostrarTablero() {
-        System.out.println("-----------------------------------");
+        
         for (int row = 0; row < tablero.length; row++) {
             for (int column = 0; column < tablero[row].length; column++) {
                 System.out.print(" | " + tablero[row][column]);
             }
             System.out.println(" |");
             System.out.println();
-            System.out.println("-----------------------------------");
+            if (row != 9){
+            System.out.println("-------------------------------------------");
+        }
         }
     }
 }

@@ -14,6 +14,7 @@ public class cCaballo extends cTrebejo {
     public cCaballo() {
         this.numero = 2;
         this.inicial = 'C';
+        this.color = " ";
     }
 
     public void moverTrebejo() {

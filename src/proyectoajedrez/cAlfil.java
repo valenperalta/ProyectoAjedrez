@@ -14,6 +14,7 @@ public class cAlfil extends cTrebejo {
     public cAlfil() {
         this.numero = 2;
         this.inicial = 'A';
+       this.color = " ";
     }
 
     public void moverTrebejo() {

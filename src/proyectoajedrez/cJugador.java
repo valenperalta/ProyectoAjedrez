@@ -89,5 +89,33 @@ public class cJugador {
     public void setRe(cReina re) {
         this.re = re;
     }
+    
+    public void setColorTrebejos(){
+        if(this.color == "blanco"){
+            for (int i = 0; i < p.length; i++) {
+                p[i].color = "blanco";
+            }
+            for (int i = 0; i < a.length; i++) {
+                a[i].color = "blanco";
+                c[i].color = "blanco";
+                t[i].color = "blanco";
+                
+            }
+            r.color = "blanco";
+            re.color = "blanco";
+        }else if(this.color == "negro"){
+            for (int i = 0; i < p.length; i++) {
+                p[i].color = "negro";
+            }
+            for (int i = 0; i < a.length; i++) {
+                a[i].color = "negro";
+                c[i].color = "negro";
+                t[i].color = "negro";
+                
+            }
+            r.color = "negro";
+            re.color = "negro";
+        }
+    }
 
 }

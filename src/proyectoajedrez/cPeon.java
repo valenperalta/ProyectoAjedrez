@@ -18,6 +18,7 @@ public class cPeon extends cTrebejo {
     public cPeon() {
         this.numero = 8;
         this.inicial = 'P';
+        this.color = " ";
     }
 
     public void moverTrebejo(cPeon p, cCelda cInicial, cCelda cFinal) {

@@ -14,6 +14,7 @@ public class cReina extends cTrebejo {
     public cReina() {
         this.numero = 1;
         this.inicial = 'r';
+        this.color = " ";
     }
 
     public void moverTrebejo() {

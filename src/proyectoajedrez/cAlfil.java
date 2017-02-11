@@ -11,4 +11,12 @@ package proyectoajedrez;
  */
 public class cAlfil extends cTrebejo {
 
+    public cAlfil() {
+        this.numero = 2;
+        this.inicial = 'A';
+    }
+
+    public void moverTrebejo() {
+
+    }
 }

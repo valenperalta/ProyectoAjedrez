@@ -11,4 +11,13 @@ package proyectoajedrez;
  */
 public class cRey extends cTrebejo {
 
+    public cRey() {
+        this.numero = 1;
+        this.inicial = 'R';
+    }
+
+    public void moverTrebejo() {
+
+    }
+
 }

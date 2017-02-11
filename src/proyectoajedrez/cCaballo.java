@@ -11,4 +11,12 @@ package proyectoajedrez;
  */
 public class cCaballo extends cTrebejo {
 
+    public cCaballo() {
+        this.numero = 2;
+        this.inicial = 'C';
+    }
+
+    public void moverTrebejo() {
+
+    }
 }

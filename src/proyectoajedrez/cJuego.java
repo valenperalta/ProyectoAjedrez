@@ -10,7 +10,12 @@ package proyectoajedrez;
  * @author valentinam.peralta
  */
 public class cJuego {
+
     private cJugador j1, j2;
     private cTablero t;
-    
+
+    public void gestionJuego() {
+
+    }
+
 }

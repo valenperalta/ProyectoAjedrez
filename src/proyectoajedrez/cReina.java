@@ -11,4 +11,12 @@ package proyectoajedrez;
  */
 public class cReina extends cTrebejo {
 
+    public cReina() {
+        this.numero = 1;
+        this.inicial = 'r';
+    }
+
+    public void moverTrebejo() {
+
+    }
 }

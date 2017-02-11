@@ -16,7 +16,8 @@ public class cPeon extends cTrebejo {
     static Scanner scan = new Scanner(System.in);
 
     public cPeon() {
-        super();
+        this.numero = 8;
+        this.inicial = 'P';
     }
 
     public void moverTrebejo(cPeon p, cCelda cInicial, cCelda cFinal) {

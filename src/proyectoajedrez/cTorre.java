@@ -11,4 +11,12 @@ package proyectoajedrez;
  */
 public class cTorre extends cTrebejo {
 
+    public cTorre() {
+        this.numero = 2;
+        this.inicial = 'T';
+    }
+
+    public void moverTrebejo() {
+
+    }
 }

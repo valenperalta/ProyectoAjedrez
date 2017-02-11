@@ -20,7 +20,6 @@ public class cJugador {
     cTorre t[] = new cTorre[2];
     cRey r = new cRey();
     cReina re = new cReina();
-    
 
     public cJugador(String color) {
         this.color = color;

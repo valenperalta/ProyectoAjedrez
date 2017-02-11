@@ -15,10 +15,10 @@ public abstract class cTrebejo {
 
     static Scanner scan = new Scanner(System.in);
 
-    protected String color;
+    protected String color;//el color se lo da el jugador creo q no deberiamos tener color en trebejo
     protected int numero;
     protected char inicial;
-    protected cCelda c;
+    protected cCelda c;//no necesito celda en trebejo segun yo le da la posicion cada jugador con una validacion dependiendo del nombre creo
 
     public cTrebejo() {
         this.color = " ";
@@ -75,6 +75,7 @@ public abstract class cTrebejo {
     }
 
     public void moverTrebejo(cTrebejo t, cCelda cInicial, cCelda cFinal) {
+        //no deberia ser un boolean que compruebe si el movimeinto que desea hacer el jugador es posible?
         System.out.print("Ingrese inicial: ");
         this.inicial = scan.next().charAt(0);
     }

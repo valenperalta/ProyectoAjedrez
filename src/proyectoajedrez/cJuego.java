@@ -15,6 +15,9 @@ public class cJuego {
     private cTablero t;
 
     public void gestionJuego() {
+        while ((j1.cantidadTrebejos != 0) || (j2.cantidadTrebejos != 0)) {
+            
+        }
 
     }
 

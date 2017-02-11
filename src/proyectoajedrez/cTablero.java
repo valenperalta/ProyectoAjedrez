@@ -40,7 +40,9 @@ public class cTablero {
     }
 
     public void gestionTablero() {
-
+        while((j1.cantidadTrebejos != 0) || (j2.cantidadTrebejos != 0)){
+            
+        }
     }
 
     public void mostrarTablero() {

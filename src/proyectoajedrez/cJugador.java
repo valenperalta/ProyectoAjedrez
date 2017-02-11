@@ -12,6 +12,7 @@ package proyectoajedrez;
 public class cJugador {
 
     public String color;
+    public int cantidadTrebejos;
 
     cPeon p[] = new cPeon[8];
     cAlfil a[] = new cAlfil[2];
@@ -19,9 +20,11 @@ public class cJugador {
     cTorre t[] = new cTorre[2];
     cRey r = new cRey();
     cReina re = new cReina();
+    
 
     public cJugador(String color) {
         this.color = color;
+        this.cantidadTrebejos = 16;
     }
 
     public String getColor() {
@@ -30,6 +33,14 @@ public class cJugador {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public int getCantidadTrebejos() {
+        return cantidadTrebejos;
+    }
+
+    public void setCantidadTrebejos(int cantidadTrebejos) {
+        this.cantidadTrebejos = cantidadTrebejos;
     }
 
     public cPeon[] getP() {

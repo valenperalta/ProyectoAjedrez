@@ -21,7 +21,7 @@ public class ProyectoAjedrezInicio {
 
         cCelda c1 = new cCelda();
         cCelda c2 = new cCelda();
-        cPeon p = new cPeon(c1);
+        cPeon p = new cPeon();
         p.moverTrebejo(p, c1, c2);
     }
 

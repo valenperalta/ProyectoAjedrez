@@ -9,11 +9,10 @@ package proyectoajedrez;
  *
  * @author valentinam.peralta
  */
-
 public class cTablero {
 
     private char[][] tablero = new char[10][10];
-    private cJugador j1,j2;
+    private cJugador j1, j2;
     private boolean disponible;
 
     public cTablero() {
@@ -45,24 +44,24 @@ public class cTablero {
     }
 
     public void mostrarTablero() {
-        
+
         for (int row = 0; row < tablero.length; row++) {
             for (int column = 0; column < tablero[row].length; column++) {
                 System.out.print(" | " + tablero[row][column]);
             }
             System.out.println(" |");
             System.out.println();
-            if (row != 9){
-            System.out.println("-------------------------------------------");
-        }
+            if (row != 9) {
+                System.out.println("-------------------------------------------");
+            }
         }
     }
-    
-    public void checkDisponibilidad(){
-        
+
+    public void checkDisponibilidad() {
+
     }
-    
-    public void setTrebejosCelda(){
-    
+
+    public void setTrebejosCelda() {
+
     }
 }

@@ -9,6 +9,6 @@ package proyectoajedrez;
  *
  * @author valentinam.peralta
  */
-public class cCaballo extends cTrebejo{
-    
+public class cCaballo extends cTrebejo {
+
 }

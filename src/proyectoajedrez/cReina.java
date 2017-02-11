@@ -9,6 +9,6 @@ package proyectoajedrez;
  *
  * @author valentinam.peralta
  */
-public class cReina extends cTrebejo{
-    
+public class cReina extends cTrebejo {
+
 }

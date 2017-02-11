@@ -10,8 +10,9 @@ package proyectoajedrez;
  * @author valentinam.peralta
  */
 public class cJugador {
+
     public String color;
-    
+
     cPeon p[] = new cPeon[8];
     cAlfil a[] = new cAlfil[2];
     cCaballo c[] = new cCaballo[2];
@@ -78,7 +79,5 @@ public class cJugador {
     public void setRe(cReina re) {
         this.re = re;
     }
-    
-    
-    
+
 }

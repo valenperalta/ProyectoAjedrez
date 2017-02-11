@@ -9,6 +9,6 @@ package proyectoajedrez;
  *
  * @author valentinam.peralta
  */
-public class cAlfil extends cTrebejo{
-    
+public class cAlfil extends cTrebejo {
+
 }

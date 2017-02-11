@@ -9,6 +9,6 @@ package proyectoajedrez;
  *
  * @author valentinam.peralta
  */
-public class cRey extends cTrebejo{
-    
+public class cRey extends cTrebejo {
+
 }

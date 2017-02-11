@@ -10,15 +10,14 @@ package proyectoajedrez;
  * @author valentinam.peralta
  */
 public class cCelda {
-    
-        private char row,column;
-        private cTrebejo tre;
-        
-        
-        public cCelda(){
-            this.row = ' ';
-            this.column = ' ';
-        }
+
+    private char row, column;
+    private cTrebejo tre;
+
+    public cCelda() {
+        this.row = ' ';
+        this.column = ' ';
+    }
 
     public cCelda(char row, char column) {
         this.row = row;
@@ -48,8 +47,6 @@ public class cCelda {
     public void setTre(cTrebejo tre) {
         this.tre = tre;
     }
-    
-    
 
     @Override
     public String toString() {
@@ -76,8 +73,5 @@ public class cCelda {
         }
         return true;
     }
-    
-    
-        
-        
+
 }

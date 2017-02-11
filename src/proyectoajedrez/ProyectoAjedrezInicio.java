@@ -18,11 +18,11 @@ public class ProyectoAjedrezInicio {
         cTablero t = new cTablero();
         t.setTablero();
         t.mostrarTablero();
-        
+
         cCelda c1 = new cCelda();
         cCelda c2 = new cCelda();
         cPeon p = new cPeon();
-        p.moverTrebejo(p,c1,c2);
+        p.moverTrebejo(p, c1, c2);
     }
-    
+
 }

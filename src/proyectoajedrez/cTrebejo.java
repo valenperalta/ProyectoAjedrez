@@ -20,15 +20,14 @@ public abstract class cTrebejo {
     protected char inicial;
     protected cCelda ci;//no necesito celda en trebejo segun yo le da la posicion cada jugador con una validacion dependiendo del nombre creo
     protected cCelda cf;
-    
+
     public cTrebejo() {
         this.color = " ";
         this.numero = 0;
         this.inicial = ' ';
         this.ci = new cCelda();
         this.cf = new cCelda();
-        
-        
+
     }
 
     public cTrebejo(String color, int numero, char inicial, cCelda c, cCelda c1) {
@@ -92,12 +91,12 @@ public abstract class cTrebejo {
         System.out.print("Ingrese inicial: ");
         this.inicial = scan.next().charAt(0);
     }
-    
-    public boolean validacion(){
+
+    public boolean validacion() {
         boolean respuesta = false;
-        if(ci.equals(cf)){
+        if (ci.equals(cf)) {
             respuesta = true;
-        }else {
+        } else {
             respuesta = false;
         }
         return respuesta;

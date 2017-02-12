@@ -42,7 +42,7 @@ public class cTablero {
     }
 
     public void gestionTablero() {
-        
+
     }
 
     public void mostrarTablero() {
@@ -64,8 +64,8 @@ public class cTablero {
     }
 
     public void setTrebejosCelda() {
-        int j=7;
-        
+        int j = 7;
+
         tablero[8][3] = j1.a[0].inicial;
         tablero[8][6] = j1.a[1].inicial;
         tablero[8][1] = j1.t[0].inicial;
@@ -75,7 +75,7 @@ public class cTablero {
         tablero[8][4] = j1.re.inicial;
         tablero[8][5] = j1.r.inicial;
         for (int i = 1; i < 9; i++) {
-            tablero[j][i] = j1.p[i-1].inicial;
+            tablero[j][i] = j1.p[i - 1].inicial;
         }
         j = 2;
         tablero[1][3] = j2.a[0].inicial;
@@ -87,7 +87,7 @@ public class cTablero {
         tablero[1][4] = j2.re.inicial;
         tablero[1][5] = j2.r.inicial;
         for (int i = 1; i < 9; i++) {
-            tablero[j][i] = j2.p[i-1].inicial;
+            tablero[j][i] = j2.p[i - 1].inicial;
         }
     }
 }

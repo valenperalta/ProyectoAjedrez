@@ -22,12 +22,12 @@ public class cPeon extends cTrebejo {
     }
 
     public void moverTrebejo(cPeon p) {
-       ci.leer();
-       cf.leer();
-       while(super.validacion() == true){
-          ci.leer();
-          cf.leer();
-       }
+        ci.leer();
+        cf.leer();
+        while (super.validacion() == true) {
+            ci.leer();
+            cf.leer();
+        }
     }
 
 }

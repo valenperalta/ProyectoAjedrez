@@ -21,8 +21,13 @@ public class cPeon extends cTrebejo {
         this.color = " ";
     }
 
-    public void moverTrebejo(cPeon p, cCelda cInicial, cCelda cFinal) {
-
+    public void moverTrebejo(cPeon p) {
+       ci.leer();
+       cf.leer();
+       while(super.validacion() == true){
+          ci.leer();
+          cf.leer();
+       }
     }
 
 }

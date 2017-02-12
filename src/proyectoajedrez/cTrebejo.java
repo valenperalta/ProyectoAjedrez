@@ -18,20 +18,25 @@ public abstract class cTrebejo {
     protected String color;//el color se lo da el jugador creo q no deberiamos tener color en trebejo talvez si necesitamos color
     protected int numero;
     protected char inicial;
-    protected cCelda c;//no necesito celda en trebejo segun yo le da la posicion cada jugador con una validacion dependiendo del nombre creo
-
+    protected cCelda ci;//no necesito celda en trebejo segun yo le da la posicion cada jugador con una validacion dependiendo del nombre creo
+    protected cCelda cf;
+    
     public cTrebejo() {
         this.color = " ";
         this.numero = 0;
         this.inicial = ' ';
-        this.c = new cCelda();
+        this.ci = new cCelda();
+        this.cf = new cCelda();
+        
+        
     }
 
-    public cTrebejo(String color, int numero, char inicial, cCelda c) {
+    public cTrebejo(String color, int numero, char inicial, cCelda c, cCelda c1) {
         this.color = color;
         this.numero = numero;
         this.inicial = inicial;
-        this.c = c;
+        this.ci = c;
+        this.cf = c1;
     }
 
     public static Scanner getScan() {
@@ -66,17 +71,35 @@ public abstract class cTrebejo {
         this.inicial = inicial;
     }
 
-    public cCelda getC() {
-        return c;
+    public cCelda getCi() {
+        return ci;
     }
 
-    public void setC(cCelda c) {
-        this.c = c;
+    public void setCi(cCelda ci) {
+        this.ci = ci;
+    }
+
+    public cCelda getCf() {
+        return cf;
+    }
+
+    public void setCf(cCelda cf) {
+        this.cf = cf;
     }
 
     public void moverTrebejo(cTrebejo t, cCelda cInicial, cCelda cFinal) {
         //no deberia ser un boolean que compruebe si el movimeinto que desea hacer el jugador es posible?
         System.out.print("Ingrese inicial: ");
         this.inicial = scan.next().charAt(0);
+    }
+    
+    public boolean validacion(){
+        boolean respuesta = false;
+        if(ci.equals(cf)){
+            respuesta = true;
+        }else {
+            respuesta = false;
+        }
+        return respuesta;
     }
 }

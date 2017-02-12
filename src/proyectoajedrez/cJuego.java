@@ -11,11 +11,10 @@ package proyectoajedrez;
  */
 public class cJuego {
 
-    private cJugador j1, j2;
     private cTablero t;
 
     public void gestionJuego() {
-        while ((j1.cantidadTrebejos != 0) || (j2.cantidadTrebejos != 0)) {
+        while ((t.j1.cantidadTrebejos != 0) || (t.j2.cantidadTrebejos != 0)) {
             
         }
 

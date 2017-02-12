@@ -5,12 +5,15 @@
  */
 package proyectoajedrez;
 
+import java.util.Scanner;
+
 /**
  *
  * @author valentinam.peralta
  */
 public class cCelda {
 
+    static Scanner scan = new Scanner(System.in);
     private char row, column;
     private cTrebejo tre;
 
@@ -72,6 +75,13 @@ public class cCelda {
             return false;
         }
         return true;
+    }
+
+    public void leer() {
+        System.out.println("Ingrese la letra: ");
+        this.row = scan.next().charAt(0);
+        System.out.println("Ingrese el numero: ");
+        this.column = scan.next().charAt(0);
     }
 
 }

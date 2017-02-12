@@ -24,6 +24,17 @@ public class cJugador {
     public cJugador(String color) {
         this.color = color;
         this.cantidadTrebejos = 16;
+        for (int i = 0; i < p.length; i++) {
+            p[i] = new cPeon();
+
+        }
+        for (int i = 0; i < a.length; i++) {
+            a[i] = new cAlfil();
+            c[i] = new cCaballo();
+            t[i] = new cTorre();
+        }
+        cRey r = new cRey();
+        cReina re = new cReina();
     }
 
     public String getColor() {
@@ -89,9 +100,9 @@ public class cJugador {
     public void setRe(cReina re) {
         this.re = re;
     }
-    
-    public void setColorTrebejos(){
-        if(this.color == "blanco"){
+
+    public void setColorTrebejos() {
+        if (this.color == "blanco") {
             for (int i = 0; i < p.length; i++) {
                 p[i].color = "blanco";
             }
@@ -99,11 +110,11 @@ public class cJugador {
                 a[i].color = "blanco";
                 c[i].color = "blanco";
                 t[i].color = "blanco";
-                
+
             }
             r.color = "blanco";
             re.color = "blanco";
-        }else if(this.color == "negro"){
+        } else if (this.color == "negro") {
             for (int i = 0; i < p.length; i++) {
                 p[i].color = "negro";
             }
@@ -111,7 +122,7 @@ public class cJugador {
                 a[i].color = "negro";
                 c[i].color = "negro";
                 t[i].color = "negro";
-                
+
             }
             r.color = "negro";
             re.color = "negro";

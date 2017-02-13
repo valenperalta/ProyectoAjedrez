@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class cCelda {
 
     static Scanner scan = new Scanner(System.in);
-    private char row, column;
+    protected char row, column;
     private cTrebejo tre;
 
     public cCelda() {
@@ -79,9 +79,10 @@ public class cCelda {
 
     public void leer() {
         System.out.println("Ingrese la letra: ");
-        this.row = scan.next().charAt(0);
-        System.out.println("Ingrese el numero: ");
         this.column = scan.next().charAt(0);
+        System.out.println("Ingrese el numero: ");
+        this.row = scan.next().charAt(0);
+        Character.getNumericValue(this.row);
     }
 
 }

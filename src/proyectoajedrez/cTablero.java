@@ -5,11 +5,15 @@
  */
 package proyectoajedrez;
 
+import java.util.Scanner;
+
 /**
  *
  * @author valentinam.peralta
  */
 public class cTablero {
+
+    static Scanner scan = new Scanner(System.in);
 
     private char[][] tablero = new char[10][10];
     protected cJugador j1, j2;
@@ -89,5 +93,15 @@ public class cTablero {
         for (int i = 1; i < 9; i++) {
             tablero[j][i] = j2.p[i - 1].inicial;
         }
+    }
+
+    public void setmTrebejo() {
+        int trebejo;
+        cCelda celda = new cCelda();
+        System.out.println("Que trebejo desea mover?");
+        trebejo = scan.nextInt();
+        celda = j1.p[trebejo].moverTrebejo();
+        tablero[Character.getNumericValue(celda.row)][Character.getNumericValue(celda.column)] = j1.p[trebejo].inicial;
+        tablero[Character.getNumericValue(celda.row + 1)][Character.getNumericValue(celda.column)] = ' ';
     }
 }

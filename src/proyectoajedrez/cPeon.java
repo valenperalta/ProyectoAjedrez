@@ -14,20 +14,29 @@ import java.util.Scanner;
 public class cPeon extends cTrebejo {
 
     static Scanner scan = new Scanner(System.in);
+    int contador;
 
     public cPeon() {
         this.numero = 8;
         this.inicial = 'P';
         this.color = " ";
+        this.contador = 0;
     }
 
-    public void moverTrebejo(cPeon p) {
+    public cCelda moverTrebejo() {
+        cCelda celda = new cCelda();
         ci.leer();
         cf.leer();
         while (super.validacion() == true) {
             ci.leer();
             cf.leer();
         }
+        contador++;
+        if (contador > 0) {
+            if ((ci.column == cf.column) && (ci.row == cf.row + 1)) {
+                celda = cf;
+            }
+        }
+        return celda;
     }
-
 }

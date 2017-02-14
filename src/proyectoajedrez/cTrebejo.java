@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author valentinam.peralta
  */
-public abstract class cTrebejo {
+public class cTrebejo {
 
     static Scanner scan = new Scanner(System.in);
 
@@ -90,6 +90,7 @@ public abstract class cTrebejo {
         //no deberia ser un boolean que compruebe si el movimeinto que desea hacer el jugador es posible?
         System.out.print("Ingrese inicial: ");
         this.inicial = scan.next().charAt(0);
+        //Llamar a celda
     }
 
     public boolean validacion() {

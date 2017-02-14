@@ -15,10 +15,10 @@ public class cTrebejo {
 
     static Scanner scan = new Scanner(System.in);
 
-    protected String color;//el color se lo da el jugador creo q no deberiamos tener color en trebejo talvez si necesitamos color
+    protected String color;
     protected int numero;
     protected char inicial;
-    protected cCelda ci;//no necesito celda en trebejo segun yo le da la posicion cada jugador con una validacion dependiendo del nombre creo
+    protected cCelda ci;
     protected cCelda cf;
 
     public cTrebejo() {

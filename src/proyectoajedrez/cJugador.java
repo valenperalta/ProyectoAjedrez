@@ -14,6 +14,7 @@ public class cJugador {
     public String color;
     public int cantidadTrebejos;
 
+    //eliminar trebejos?
     cPeon p[] = new cPeon[8];
     cAlfil a[] = new cAlfil[2];
     cCaballo c[] = new cCaballo[2];

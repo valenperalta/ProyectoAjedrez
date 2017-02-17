@@ -19,11 +19,6 @@ public class ProyectoAjedrezInicio {
         t.setTablero();
         t.setTrebejosCelda();
         t.mostrarTablero();
-
-        cCelda c1 = new cCelda();
-        cCelda c2 = new cCelda();
-        cPeon p = new cPeon();
-
         t.setmTrebejo();
         t.mostrarTablero();
     }

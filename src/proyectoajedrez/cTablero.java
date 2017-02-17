@@ -12,13 +12,14 @@ import java.util.Scanner;
  * @author valentinam.peralta
  */
 public class cTablero {
-    
+
     static Scanner scan = new Scanner(System.in);
-    
+
     private cTrebejo[][] tablero = new cTrebejo[10][10];
     protected cJugador j1, j2;
     private boolean disponible;
-    
+    private int x1, x2, y1, y2;
+
     public cTablero() {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
@@ -28,7 +29,7 @@ public class cTablero {
         j1 = new cJugador("blanco");
         j2 = new cJugador("negro");
     }
-    
+
     public void setTablero() {
         int j = 1;
         char i;
@@ -44,13 +45,13 @@ public class cTablero {
             j++;
         }
     }
-    
+
     public void gestionTablero() {
-        
+
     }
-    
+
     public void mostrarTablero() {
-        
+
         for (int row = 0; row < tablero.length; row++) {
             for (int column = 0; column < tablero[row].length; column++) {
                 System.out.print(" | " + tablero[row][column].inicial);
@@ -62,14 +63,14 @@ public class cTablero {
             }
         }
     }
-    
+
     public void checkDisponibilidad() {
-        
+
     }
-    
+
     public void setTrebejosCelda() {
         int j = 7;
-        
+
         tablero[8][3] = new cAlfil();
         tablero[8][6] = new cAlfil();
         tablero[8][1] = new cTorre();
@@ -79,7 +80,7 @@ public class cTablero {
         tablero[8][4] = new cReina();
         tablero[8][5] = new cRey();
         for (int i = 1; i < 9; i++) {
-            tablero[j][i] = new cPeon();
+            tablero[j][i] = new cPeon(1);
         }
         j = 2;
         tablero[1][3] = new cAlfil();
@@ -91,17 +92,98 @@ public class cTablero {
         tablero[1][4] = new cReina();
         tablero[1][5] = new cRey();
         for (int i = 1; i < 9; i++) {
-            tablero[j][i] = new cPeon();
+            tablero[j][i] = new cPeon(1);
         }
     }
-    
+
     public void setmTrebejo() {
-        int trebejo;
-        cCelda celda = new cCelda();
-        System.out.println("Que trebejo desea mover?");
-        trebejo = scan.nextInt();
-        celda = j1.p[trebejo].moverTrebejo();
-        //tablero[Character.getNumericValue(celda.row)][Character.getNumericValue(celda.column)] = j1.p[trebejo].inicial;
-        //tablero[Character.getNumericValue(celda.row + 1)][Character.getNumericValue(celda.column)] = ' ';
+        this.leer();
+        while ((this.tablero[x1][y1].moverTrebejo(this.tablero, x1, x2, y1, y2)) != false) {
+            this.tablero[x2][y2] = this.tablero[x1][y1];
+            this.tablero[x1][y1] = new cTrebejo();
+        }
+
+    }
+
+    public void leer() {
+        char column = ' ';
+        while ((column != 'a' && column != 'b' && column != 'c' && column != 'd' && column != 'e' && column != 'f' && column != 'g' && column != 'h')) {
+            System.out.print("Ingrese la letra: ");
+            column = scan.next().charAt(0);
+
+            switch (column) {
+                case 'a':
+                    this.y1 = 1;
+                    break;
+                case 'b':
+                    this.y1 = 2;
+                    break;
+                case 'c':
+                    this.y1 = 3;
+                    break;
+                case 'd':
+                    this.y1 = 4;
+                    break;
+                case 'e':
+                    this.y1 = 5;
+                    break;
+                case 'f':
+                    this.y1 = 6;
+                    break;
+                case 'g':
+                    this.y1 = 7;
+                    break;
+                case 'h':
+                    this.y1 = 8;
+                    break;
+                default:
+                    System.out.println("No puede ingresar esa letra");
+
+            }
+        }
+        //valir que no este fuera de rango
+        //agregar try catch
+        System.out.print("Ingrese el numero: ");
+        this.x1 = scan.nextInt();
+        scan.nextLine();
+        column = ' ';
+
+        while ((column != 'a' && column != 'b' && column != 'c' && column != 'd' && column != 'e' && column != 'f' && column != 'g' && column != 'h')) {
+            System.out.print("Ingrese la letra: ");
+            column = scan.next().charAt(0);
+
+            switch (column) {
+                case 'a':
+                    this.y2 = 1;
+                    break;
+                case 'b':
+                    this.y2 = 2;
+                    break;
+                case 'c':
+                    this.y2 = 3;
+                    break;
+                case 'd':
+                    this.y2 = 4;
+                    break;
+                case 'e':
+                    this.y2 = 5;
+                    break;
+                case 'f':
+                    this.y2 = 6;
+                    break;
+                case 'g':
+                    this.y2 = 7;
+                    break;
+                case 'h':
+                    this.y2 = 8;
+                    break;
+                default:
+                    System.out.print("No puede ingresar esa letra");
+
+            }
+        }
+        //valir que no este fuera de rango
+        System.out.println("Ingrese el numero: ");
+        this.x2 = scan.nextInt();
     }
 }

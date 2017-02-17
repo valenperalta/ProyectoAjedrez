@@ -17,7 +17,8 @@ public class cCaballo extends cTrebejo {
         this.color = " ";
     }
 
-    public void moverTrebejo() {
-
+    public boolean moverTrebejo(cTrebejo tablero[][], int x1, int x2, int y1, int y2) {
+        boolean respuesta = false;
+        return respuesta;
     }
 }

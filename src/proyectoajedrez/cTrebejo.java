@@ -18,24 +18,17 @@ public class cTrebejo {
     protected String color;
     protected int numero;
     protected char inicial;
-    protected cCelda ci;
-    protected cCelda cf;
 
     public cTrebejo() {
         this.color = " ";
         this.numero = 0;
         this.inicial = ' ';
-        this.ci = new cCelda();
-        this.cf = new cCelda();
-
     }
 
-    public cTrebejo(String color, int numero, char inicial, cCelda c, cCelda c1) {
+    public cTrebejo(String color, int numero, char inicial) {
         this.color = color;
         this.numero = numero;
         this.inicial = inicial;
-        this.ci = c;
-        this.cf = c1;
     }
 
     public static Scanner getScan() {
@@ -70,36 +63,34 @@ public class cTrebejo {
         this.inicial = inicial;
     }
 
-    public cCelda getCi() {
-        return ci;
-    }
+    public boolean moverTrebejo(cTrebejo tablero[][], int x1, int x2, int y1, int y2) {
+        boolean respuesta = true;
+        this.numero = 1;
 
-    public void setCi(cCelda ci) {
-        this.ci = ci;
-    }
-
-    public cCelda getCf() {
-        return cf;
-    }
-
-    public void setCf(cCelda cf) {
-        this.cf = cf;
-    }
-
-    public void moverTrebejo(cTrebejo t, cCelda cInicial, cCelda cFinal) {
-        //no deberia ser un boolean que compruebe si el movimeinto que desea hacer el jugador es posible?
-        System.out.print("Ingrese inicial: ");
-        this.inicial = scan.next().charAt(0);
-        //Llamar a celda
-    }
-
-    public boolean validacion() {
-        boolean respuesta = false;
-        if (ci.equals(cf)) {
-            respuesta = true;
-        } else {
-            respuesta = false;
-        }
         return respuesta;
+    }
+
+    public boolean validacion(int x1, int x2, int y1, int y2) {
+        boolean resp = false;
+        int con = 0;
+
+        if (x1 != x2) {
+            con++;
+        }
+        if (y1 != y2) {
+            con++;
+        }
+        if (con == 2) {
+            resp = true;
+        }
+        return resp;
+    }
+
+    public boolean celdaOcupada(cTrebejo tablero[][], int n1, int m1) {
+        boolean resp = false;
+        if (tablero[n1][m1].numero == 1) {
+            resp = true;
+        }
+        return resp;
     }
 }

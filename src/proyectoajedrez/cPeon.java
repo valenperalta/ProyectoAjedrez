@@ -40,7 +40,8 @@ public class cPeon extends cTrebejo {
         boolean resp = false;
         if (movimiento == 0) {
             for (int i = x1 + 1; i <= x1 + 2; i++) {
-                if (tablero[i][y1].celdaOcupada(tablero, i, y1)) {
+                if (tablero[i][y1].celdaOcupada(tablero, i, y1)==false) {
+                    //AAAAAAAAAAAAAAAAAAAAAA
                     contador++;
                 }
             }

@@ -98,9 +98,13 @@ public class cTablero {
 
     public void setmTrebejo() {
         this.leer();
-        while ((this.tablero[x1][y1].moverTrebejo(this.tablero, x1, x2, y1, y2)) != false) {
+        while (true) {
             this.tablero[x2][y2] = this.tablero[x1][y1];
             this.tablero[x1][y1] = new cTrebejo();
+            if ((this.tablero[x1][y1].moverTrebejo(this.tablero, x1, x2, y1, y2)) == true) {
+                System.out.println("asd");
+                break;
+            }
         }
 
     }
@@ -145,10 +149,41 @@ public class cTablero {
         //agregar try catch
         System.out.print("Ingrese el numero: ");
         this.x1 = scan.nextInt();
+        switch (this.x1) {
+            case 1:
+                this.x1 = 8;
+                break;
+            case 2:
+                this.x1 = 7;
+                break;
+            case 3:
+                this.x1 = 6;
+                break;
+            case 4:
+                this.x1 = 5;
+                break;
+            case 5:
+                this.x1 = 4;
+                break;
+            case 6:
+                this.x1 = 3;
+                break;
+            case 7:
+                this.x1 = 2;
+                break;
+            case 8:
+                this.x1 = 1;
+                break;
+            default:
+                System.out.println("No puede ingresar ese numero");
+
+        }
+
         scan.nextLine();
         column = ' ';
 
-        while ((column != 'a' && column != 'b' && column != 'c' && column != 'd' && column != 'e' && column != 'f' && column != 'g' && column != 'h')) {
+        while ((column != 'a' && column != 'b' && column != 'c' && column != 'd' && column != 'e' && column != 'f' && column != 'g' && column
+                != 'h')) {
             System.out.print("Ingrese la letra: ");
             column = scan.next().charAt(0);
 
@@ -183,7 +218,38 @@ public class cTablero {
             }
         }
         //valir que no este fuera de rango
-        System.out.println("Ingrese el numero: ");
+
+        System.out.print(
+                "Ingrese el numero: ");
         this.x2 = scan.nextInt();
+        switch (this.x2) {
+            case 1:
+                this.x2 = 8;
+                break;
+            case 2:
+                this.x2 = 7;
+                break;
+            case 3:
+                this.x2 = 6;
+                break;
+            case 4:
+                this.x2 = 5;
+                break;
+            case 5:
+                this.x2 = 4;
+                break;
+            case 6:
+                this.x2 = 3;
+                break;
+            case 7:
+                this.x2 = 2;
+                break;
+            case 8:
+                this.x2 = 1;
+                break;
+            default:
+                System.out.println("No puede ingresar ese numero");
+
+        }
     }
 }

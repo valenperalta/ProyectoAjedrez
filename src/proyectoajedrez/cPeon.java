@@ -35,13 +35,14 @@ public class cPeon extends cTrebejo {
         this.cantidad = 8;
     }
 
+    @Override
     public boolean moverTrebejo(cTrebejo tablero[][], int x1, int x2, int y1, int y2) {
         //Verifica si se puede realizar el movimiento para poder llamarlo en tablero
         boolean resp = false;
         if (movimiento == 0) {
             for (int i = x1 + 1; i <= x1 + 2; i++) {
-                if (tablero[i][y1].celdaOcupada(tablero, i, y1)==false) {
-                    //AAAAAAAAAAAAAAAAAAAAAA
+                if (tablero[i][y1].celdaOcupada(tablero, i, y1) != false) {
+
                     contador++;
                 }
             }

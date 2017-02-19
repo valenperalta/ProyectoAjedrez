@@ -111,7 +111,7 @@ public class cTablero {
 
     public void leer() {
         char column = ' ';
-        while ((column != 'a' && column != 'b' && column != 'c' && column != 'd' && column != 'e' && column != 'f' && column != 'g' && column != 'h') && ((this.x1 < 0) || (this.x1 > 8))) {
+        while ((column != 'a' && column != 'b' && column != 'c' && column != 'd' && column != 'e' && column != 'f' && column != 'g' && column != 'h') || ((this.x1 < 0) || (this.x1 > 8))) {
             System.out.print("Ingrese la letra: ");
             column = scan.next().charAt(0);
 
@@ -182,7 +182,7 @@ public class cTablero {
         scan.nextLine();
         column = ' ';
 
-        while ((column != 'a' && column != 'b' && column != 'c' && column != 'd' && column != 'e' && column != 'f' && column != 'g' && column != 'h') && ((this.x2 < 0) || (this.x2 > 8))) {
+        while ((column != 'a' && column != 'b' && column != 'c' && column != 'd' && column != 'e' && column != 'f' && column != 'g' && column != 'h') || ((this.x2 < 0) || (this.x2 > 8))) {
             System.out.print("Ingrese la letra: ");
             column = scan.next().charAt(0);
 
